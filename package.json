@@ -1,6 +1,6 @@
 {
-  "name": "nodemailer",
-  "version": "4.0.1",
+  "name": "xian-mail",
+  "version": "0.0.1",
   "description": "Easy as cake e-mail sending from your Node.js applications",
   "main": "dist/nodemailer.js",
   "scripts": {
