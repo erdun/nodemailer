@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-
+    require('load-grunt-tasks')(grunt);
     // Project configuration.
     grunt.initConfig({
         eslint: {
@@ -15,7 +15,23 @@ module.exports = function (grunt) {
                 },
                 src: ['test/**/*-test.js']
             }
-        }
+        },
+
+        babel: {
+            options: {
+                sourceMap: false,
+                presets: ['babel-preset-es2015'],
+            },
+            dist: {
+                files: [{
+                  'expand': true,
+                  'cwd': 'lib/',
+                  'src': ['*.js', '*/*.js'],
+                  'dest': 'dist',
+                  'ext': '.js'
+                }]
+            }
+        },
     });
 
     // Load the plugin(s)

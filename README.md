@@ -10,6 +10,10 @@ See [nodemailer.com](https://nodemailer.com/) for documentation and terms.
 
 -------
 
+## Why fork
+
+this repository forked from [nodemailer/nodemailer](https://github.com/nodemailer/nodemailer). I meet the problem of SyntaxError for '...' when my local node version is 7.10.0, but Meteor binding node version is 4.x.x. So if you pursue perfect please do not use Meteor.
+
 ## Having an issue?
 
 #### Nodemailer throws a SyntaxError for "..."
