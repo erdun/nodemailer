@@ -1,5 +1,7 @@
 'use strict';
 
+const { exec } = require('child_process');
+
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
     // Project configuration.
@@ -34,10 +36,17 @@ module.exports = function (grunt) {
         },
     });
 
+    
+
     // Load the plugin(s)
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-mocha-test');
 
     // Tasks
+    grunt.registerTask('copy', function() {
+        exec('cp -r lib/*  dist')
+    });
+
     grunt.registerTask('default', ['eslint', 'mochaTest']);
+    grunt.registerTask('build', ['copy', 'babel']);
 };
